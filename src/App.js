@@ -11,10 +11,26 @@ import Toggle from 'material-ui/Toggle';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import AppBar from 'material-ui/AppBar';
-import firebase from 'firebase';
-import history from '../history';
-
-
+import firebase from 'firebase'
+import history from './history';
+import Home from './components/Home';
+import { blueGrey500, cyan100,blueGrey900, blue100, indigo100, indigo500, blue900, blue500, grey50, red100 } from 'material-ui/styles/colors';
+import Profile from './components/Profile';
+const Logged = (props) => (
+  <IconMenu
+    {...props}
+    iconButtonElement={
+      <IconButton><MoreVertIcon color="white"/></IconButton>
+    }
+    targetOrigin={{horizontal: 'right', vertical: 'top'}}
+    anchorOrigin={{horizontal: 'right', vertical: 'top'}}
+  >
+    <MenuItem primaryText="Auctioner" onClick={() => history.push("/home/auctioner")}/>
+    <MenuItem primaryText="Bidder" onClick={() => history.push("/home/bidder")}/>
+    <MenuItem primaryText="Profile" onClick={() => history.push("/profile")}/>
+    <MenuItem primaryText="Sign out" onClick={() => firebase.auth().signOut().then(history.push("/"))}/>
+  </IconMenu>
+);
 
 class App extends Component {
   constructor(props){
@@ -62,7 +78,8 @@ class App extends Component {
             <div>
                 <Route exact path="/" component={Login}/>
                 <Route path="/signup" component={Signup} />
-                
+                <Route path="/home" component={Home}/>
+                <Route path="/profile" component={Profile}/>
             </div>
         </Router>
       </div>

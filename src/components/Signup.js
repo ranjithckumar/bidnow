@@ -13,8 +13,49 @@ import Login from './Login'
 import { connect } from 'react-redux';
 import { startSignUp} from '../actions/auth';
 import history from '../history';
-import './Signup.css';
 
+const styles = {
+  style : {
+    height: 450,
+    width: 400,
+    marginTop: "10%",
+    marginLeft:"40%",
+    textAlign: 'center',
+    display: 'inline-block',
+    opacity:"0.9"
+  },
+  styleName:{
+    marginTop: 30,
+    marginLeft:40,
+    marginRight: 40,
+    marginBottom: 0
+},
+  styleOthers:{
+    marginTop: 15,
+    marginLeft:40,
+    marginRight: 40,
+    marginBottom: 0
+},
+  styleButton:{
+    marginTop: 20
+  },
+  customWidth: {
+    width: 350,
+  },
+  block: {
+    maxWidth: 50
+  },
+  radioButton: {
+    marginBottom: 16,
+    display: 'inline-block',
+    width: '120px'
+    
+  },
+  customContentStyle : {
+    width: 450,
+    maxWidth: 'none',
+  }
+};
 class Signup extends React.Component {
   constructor(props){
     super(props);

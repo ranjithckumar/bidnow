@@ -1,4 +1,3 @@
-  
 import React from 'react';
 import { ValidatorForm } from 'react-form-validator-core';
 import { TextValidator } from 'react-material-ui-form-validator';
@@ -10,8 +9,35 @@ import Signup from './Signup'
 import {Route,Switch,Link} from 'react-router-dom';
 import {startSignIn} from '../actions/auth'
 import * as firebase from 'firebase';
-import './Login.css';
+import history from '../history';
 
+const styles = {
+  style : {
+    height: 450,
+    width: 400,
+    marginTop: "10%",
+    marginLeft:"40%",
+    textAlign: 'center',
+    display: 'inline-block',
+    borderRadius:5,
+    opacity:"0.9"
+  },
+  styleEmail:{
+    marginTop: 50,
+    marginLeft:40,
+    marginRight: 40,
+    marginBottom: 15
+},
+  stylePassword:{
+    marginTop: 0,
+    marginLeft:40,
+    marginRight: 40,
+    marginBottom: 0
+},
+  styleButton:{
+    marginTop: 20
+  },
+};
 
 class Login extends React.Component{
   
