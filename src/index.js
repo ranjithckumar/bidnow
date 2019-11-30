@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import configureStore from './store/configureStore';
 import * as firebase from 'firebase'
 import registerServiceWorker from './registerServiceWorker';
+// firebase api key, database url
 const store = configureStore();
 var config = {
   apiKey: "AIzaSyCTsQ99HjLa9BtHk7xSWSofwoWkRaZABhI",

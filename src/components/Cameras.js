@@ -23,6 +23,7 @@ import {
     TableRow,
     TableRowColumn,
   } from 'material-ui/Table';
+//   camera details
 class Cameras extends React.Component{
   
     constructor(props){
@@ -341,6 +342,8 @@ const mapDispatchToProp = (dispatch) =>({
    getUsersData: (test) => dispatch(getUsersData(test)),
    startSubmitBid: (userDetails) => dispatch(startSubmitBid(userDetails))
 })
+
+// 
 export default connect(mapStateToProps, mapDispatchToProp)(Cameras);
 const styles = {
   card: {

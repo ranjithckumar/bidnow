@@ -8,7 +8,7 @@ const dataReducerDefaultState = {
     submitBidData:[],
     flag:''
 }
-
+//  reducer returns next state
 export default (state = dataReducerDefaultState, action) => {
     switch (action.type) {
 

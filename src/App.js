@@ -25,6 +25,7 @@ const Logged = (props) => (
     targetOrigin={{horizontal: 'right', vertical: 'top'}}
     anchorOrigin={{horizontal: 'right', vertical: 'top'}}
   >
+    {/* Menu items  */}
     <MenuItem primaryText="Auctioner" onClick={() => history.push("/home/auctioner")}/>
     <MenuItem primaryText="Bidder" onClick={() => history.push("/home/bidder")}/>
     <MenuItem primaryText="Profile" onClick={() => history.push("/profile")}/>
@@ -74,6 +75,7 @@ class App extends Component {
               <RaisedButton label="Sign up"  style={{color:grey50}} onClick={() => history.push('/signup')} />
             </div>}
           />
+          {/* session  history for react router and react router   */}
           <Router history={history}>
             <div>
                 <Route exact path="/" component={Login}/>

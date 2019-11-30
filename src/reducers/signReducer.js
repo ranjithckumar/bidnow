@@ -5,7 +5,7 @@ const userReducerDefaultState = [{
     password:'',
     createdAt:0
 }]
-
+// reducers updated states of user 
 export default (state = userReducerDefaultState, action) => {
     switch (action.type) {
 

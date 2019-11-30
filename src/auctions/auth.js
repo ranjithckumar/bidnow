@@ -21,6 +21,7 @@ export const startSignUp = (userData = {}) =>{
            let uid = data.uid
            console.log(uid)
            firebase.auth().currentUser.updateProfile({displayName:fullName})
+        //    firebase collection name to store user data
                firebase.database().ref(`Users/${uid}`).set(userData)
                dispatch(signUp({
                    uid:uid,
@@ -37,7 +38,7 @@ export const startSignUp = (userData = {}) =>{
     type: 'USER-SIGNIN',
     user
   })
-
+//  authenticating  user 
   export const startSignIn = (user = {}) =>{
     return dispatch => {
         console.log('user in signin', user)

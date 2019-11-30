@@ -7,7 +7,7 @@ export const submitAuction = (data,flag) => ({
   data,
   flag
 });
-
+// Auction object 
 export const startSubmitAuction = (auctionData = {}) =>{
   console.log("creating account ...");
   return dispatch =>{
